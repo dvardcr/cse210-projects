@@ -1,0 +1,4 @@
+FictionBook:The Great Gatsby,F.Scott Fitzgerald,Classic,PG-13,True
+ChildrenBook:Harry Potter and the Philosopher's Stone,J.K. Rowling,No,10,True
+BiographyBook:Steve Jobs,Walter Isaacson,Steve Jobs,United States,True
+ComicBook:Batman,Bill Finger,DC Comics,English,True
