@@ -2,21 +2,19 @@ using System;
 
 public class ComicBook : Book
 {
-    // Additional attributes
-    private string Publisher;
-    private string Language;
+    public string Publisher;
+    public string Language;
 
-    // Constructor
-    public ComicBook(string title, string author, string publisher, string language, bool isAvailable) : base(title, author)
+    public ComicBook(string title, string author, string publisher, string language, bool isAvailable)
+        : base(title, author, isAvailable)
     {
         Publisher = publisher;
         Language = language;
+        IsAvailable = true;
     }
 
-    // Implementing abstract behavior
     public override string DisplayDetails()
     {
-        // Return a string representation of the book details
         return $"ComicBook:{Title},{Author},{Publisher},{Language},{IsAvailable}";
     }
 }

@@ -2,21 +2,19 @@ using System;
 
 public class FictionBook : Book
 {
-    // Additional attributes
-    private string Genre;
-    private string Classification;
+    public string Classification;
+    public string Type;
 
-    // Constructor
-    public FictionBook(string title, string author, string genre, string classification, bool isAvailable) : base(title, author)
+    public FictionBook(string title, string author, string classification, string type, bool isAvailable)
+        : base(title, author, isAvailable)
     {
-        Genre = genre;
         Classification = classification;
+        Type = type;
+        IsAvailable = true;
     }
 
-    // Implementing abstract behavior
     public override string DisplayDetails()
     {
-        // Return a string representation of the book details
-        return $"FictionBook:{Title},{Author},{Genre},{Classification},{IsAvailable}";
+        return $"FictionBook:{Title},{Author},{Classification},{Type},{IsAvailable}";
     }
 }

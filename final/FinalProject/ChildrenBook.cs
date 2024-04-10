@@ -2,21 +2,19 @@ using System;
 
 public class ChildrenBook : Book
 {
-    // Additional attributes
-    private string Activities;
-    private int Age;
+    public int Age;
+    public bool Illustrated;
 
-    // Constructor
-    public ChildrenBook(string title, string author, string activities, int age, bool isAvailable) : base(title, author)
+    public ChildrenBook(string title, string author, int age, bool illustrated, bool isAvailable)
+        : base(title, author, isAvailable)
     {
-        Activities = activities;
         Age = age;
+        Illustrated = illustrated;
+        IsAvailable = true;
     }
 
-    // Implementing abstract behavior
     public override string DisplayDetails()
     {
-        // Return a string representation of the book details
-        return $"ChildrenBook:{Title},{Author},{Activities},{Age},{IsAvailable}";
+        return $"ChildrenBook:{Title},{Author},{Age},{(Illustrated ? "Illustrated" : "Not illustrated")},{IsAvailable}";
     }
 }

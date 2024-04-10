@@ -2,25 +2,22 @@ using System;
 
 public abstract class Book
 {
-    // Attributes
     protected string Title;
     protected string Author;
     protected bool IsAvailable;
+    protected DateTime ReturnDate;
 
-    // Constructor
-    protected Book(string title, string author)
+    public Book(string title, string author, bool isAvailable)
     {
         Title = title;
         Author = author;
         IsAvailable = true;
     }
 
-    // Method to check if the book is available
-    public bool CheckAvailability()
+    public void SetAvailability(bool available)
     {
-        return IsAvailable;
+        IsAvailable = available;
     }
 
-    // Abstract behavior
     public abstract string DisplayDetails();
 }
